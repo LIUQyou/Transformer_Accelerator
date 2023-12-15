@@ -62,25 +62,25 @@ void TransformerBlock::compute(std::size_t seq_len, uint32_t *input, uint32_t *o
     condense->compute(seq_len, multihead_out_reshape, condense_out);
     // system("m5 dumpresetstats");
 
-    writeToCSV("condense_out.csv", condense_out, 512, seq_len);
+    // writeToCSV("condense_out.csv", condense_out, 512, seq_len);
 
     std::cout << "Add Norm"  << std::endl;
     // input [seq_len, input_dim], condense_out [seq_len, input_dim], output [seq_len, input_dim]
     addNorm->compute(input, condense_out);
     // system("m5 dumpresetstats");
 
-    writeToCSV("condense_out_2.csv", condense_out, 512, seq_len);
+    // writeToCSV("condense_out_2.csv", condense_out, 512, seq_len);
 
     std::cout << "Feed Forward 0"  << std::endl;
     // input [seq_len, input_dim], weight [input_dim, ff_size], bias [ff_size], output [seq_len, ff_size]
     feedForward0->compute(seq_len, condense_out, intermediateFF);
-    feedForward0->computeSystolic(seq_len, condense_out, intermediateFF_debug);
-    for(int i=0; i<seq_len*ff_size_; i++){
-        if(intermediateFF[i] != intermediateFF_debug[i]){
-            std::cout<<"Error: systolic and tiled results are different"<<std::endl;
-            return;
-        }
-    }
+    // feedForward0->computeSystolic(seq_len, condense_out, intermediateFF_debug);
+    // for(int i=0; i<seq_len*ff_size_; i++){
+    //     if(intermediateFF[i] != intermediateFF_debug[i]){
+    //         std::cout<<"Error: systolic and tiled results are different"<<std::endl;
+    //         return;
+    //     }
+    // }
     // system("m5 dumpresetstats");
 
     std::cout << "Feed Forward 1"  << std::endl;
@@ -94,11 +94,11 @@ void TransformerBlock::compute(std::size_t seq_len, uint32_t *input, uint32_t *o
     // system("m5 dumpresetstats");
     temp = multihead_out_reshape;
 
-    // Writing the arrays to CSV files
-    writeToCSV("input.csv", input, 512, seq_len);       // Assuming 'input_dim' is the width for 'input'
-    writeToCSV("output.csv", output, 512, seq_len);     // Assuming 'input_dim' is the width for 'output'
-    writeToCSV("multihead_out_1.csv", multihead_out_reshape, head_hidden_size_, seq_len);
-    writeToCSV("multihead_out.csv", multihead_out_reshape, head_hidden_size_ * num_heads_, seq_len);
+    // // Writing the arrays to CSV files
+    // writeToCSV("input.csv", input, 512, seq_len);       // Assuming 'input_dim' is the width for 'input'
+    // writeToCSV("output.csv", output, 512, seq_len);     // Assuming 'input_dim' is the width for 'output'
+    // writeToCSV("multihead_out_1.csv", multihead_out_reshape, head_hidden_size_, seq_len);
+    // writeToCSV("multihead_out.csv", multihead_out_reshape, head_hidden_size_ * num_heads_, seq_len);
 }
 
 TransformerBlockSystolic::TransformerBlockSystolic(std::size_t pre_seq_len, std::size_t input_dim, std::size_t head_hidden_size,

@@ -51,8 +51,8 @@ int main()
     Matrix<Data_Type> tensor_out_partial(INPUT_DIMENSION, OUTPUT_DIMENSION);
     Matrix<Data_Type> tensor_out(INPUT_DIMENSION, INSIDE_DIMENSION);
 
-    Matrix_initialize_rand(tensor_in);
-    writeToCSV("tensor_in.csv", tensor_in);
+    // Matrix_initialize_rand(tensor_in);
+    readFromCSV("tensor_in.csv", tensor_in);
 
     // instialize the weight matrix array here
     for (size_t i = 0; i < NUM_HEADS; i++)

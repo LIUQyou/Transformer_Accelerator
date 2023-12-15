@@ -184,8 +184,57 @@ void test_systolic()
     delete[] output_tile;
 }
 
+
+void run_transformer(){
+    std::cout<<"First line" << std::endl;
+    uint32_t tensor_in[D_SEQ * D_MODEL];
+    if(!readFromCSV("tensor_in.csv", tensor_in, D_MODEL, D_SEQ))
+    {
+        std::cout<<"Error: reading input file"<<std::endl;
+        return;
+    }
+    uint32_t out[D_SEQ*D_MODEL];
+    uint32_t out_systolic[D_SEQ*D_MODEL];
+    uint32_t *temp;
+    uint32_t *temp_systolic;
+
+
+    uint32_t * weightVec[3*NUM_HEAD+3];
+
+    for (int n=0; n<NUM_HEAD; n++){
+        auto query_kernel = new uint32_t [D_Q* D_MODEL];
+        fill_kernel(query_kernel, D_Q* D_MODEL);
+        weightVec[n*3] = query_kernel;
+
+        auto key_kernel = new uint32_t [ D_Q* D_MODEL];
+        fill_kernel(key_kernel, D_Q* D_MODEL);
+        weightVec[n*3 + 1] = key_kernel;
+
+        auto value_kernel = new uint32_t [ D_Q* D_MODEL];
+        fill_kernel(value_kernel, D_Q* D_MODEL);
+        weightVec[n*3 + 2] = value_kernel;
+    }
+
+    uint32_t condense_kernel[ NUM_HEAD * D_Q * D_MODEL];
+    fill_kernel(condense_kernel, NUM_HEAD * D_Q * D_MODEL);
+    weightVec[NUM_HEAD*3] = condense_kernel;
+
+    auto ff0_kernel = new uint32_t [ D_MODEL* D_FF];
+    fill_kernel(ff0_kernel, D_MODEL* D_FF);
+    weightVec[NUM_HEAD*3+1] = ff0_kernel;
+
+    auto ff1_kernel = new uint32_t [ D_FF* D_MODEL];
+    fill_kernel(ff1_kernel, D_FF* D_MODEL);
+    weightVec[NUM_HEAD*3 + 2] = ff1_kernel;
+
+    TransformerBlock selfatten(D_SEQ, D_MODEL, D_Q, NUM_HEAD, D_FF, weightVec);
+    selfatten.compute(D_SEQ, tensor_in, out, temp);
+
+    std::cout<<"Test finished!!" << std::endl;
+}
+
 int main() {
-    test();
+    run_transformer();
     // test_systolic();
     return 0;
 }

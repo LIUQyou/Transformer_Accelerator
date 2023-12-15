@@ -68,14 +68,14 @@ void TransformerBlock<T>::compute(std::size_t seq_len, Matrix<T> &input, Matrix<
     condense->compute(seq_len, multihead_out_merge, *condense_out);
     // system("m5 dumpresetstats");
 
-    writeToCSV("condense_out.csv", *condense_out);
+    // writeToCSV("condense_out.csv", *condense_out);
 
     std::cout << "Add Norm"  << std::endl;
     // input [seq_len, input_dim], condense_out [seq_len, input_dim], output [seq_len, input_dim]
     addNorm->compute(input, *condense_out);
     // system("m5 dumpresetstats");
 
-    writeToCSV("condense_out_2.csv", *condense_out);
+    // writeToCSV("condense_out_2.csv", *condense_out);
 
     std::cout << "Feed Forward 0"  << std::endl;
     // input [seq_len, input_dim], weight [input_dim, ff_size], bias [ff_size], output [seq_len, ff_size]
@@ -92,12 +92,12 @@ void TransformerBlock<T>::compute(std::size_t seq_len, Matrix<T> &input, Matrix<
     // input [seq_len, input_dim], output [seq_len, input_dim]
     addNorm->compute(multihead_out_merge, output);
     // system("m5 dumpresetstats");
-    writeToCSV("input.csv", input);
-    writeToCSV("output.csv", output);
+    // writeToCSV("input.csv", input);
+    // writeToCSV("output.csv", output);
 
-    // Assuming multihead_out_merge is a merged Matrix representing multihead_out
-    writeToCSV("multihead_out_1.csv", *multihead_out[0]);
-    writeToCSV("multihead_out.csv", multihead_out_merge);
+    // // Assuming multihead_out_merge is a merged Matrix representing multihead_out
+    // writeToCSV("multihead_out_1.csv", *multihead_out[0]);
+    // writeToCSV("multihead_out.csv", multihead_out_merge);
 }
 
 template class TransformerBlock<int>;
