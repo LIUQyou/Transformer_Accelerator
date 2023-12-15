@@ -1,0 +1,904 @@
+desc: (none)
+cmd: ./matrix_test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2365899
+mem_heap_B=73728
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2367781
+mem_heap_B=77824
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2367817
+mem_heap_B=81920
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2580696
+mem_heap_B=82944
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=3826688
+mem_heap_B=82944
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n4: 82944 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 4096 0x10F1F0: block_block_test() (matrix_multiplication.cc:38)
+  n0: 4096 0x10FC51: main (matrix_multiplication.cc:157)
+ n1: 4096 0x10F201: block_block_test() (matrix_multiplication.cc:39)
+  n0: 4096 0x10FC51: main (matrix_multiplication.cc:157)
+ n1: 1024 0x10F38E: block_block_test() (matrix_multiplication.cc:52)
+  n0: 1024 0x10FC51: main (matrix_multiplication.cc:157)
+#-----------
+snapshot=6
+#-----------
+time=3826688
+mem_heap_B=78848
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=3826721
+mem_heap_B=74752
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=3826754
+mem_heap_B=73728
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=3827570
+mem_heap_B=74112
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=3830389
+mem_heap_B=106880
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3835842
+mem_heap_B=139648
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=3841295
+mem_heap_B=172416
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=3846748
+mem_heap_B=205184
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=3852201
+mem_heap_B=237952
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3857654
+mem_heap_B=270720
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=detailed
+n3: 270720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 196608 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 196608 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 196608 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 196608 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 196608 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n1: 196608 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 196608 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 196608 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=3863107
+mem_heap_B=303488
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=3868560
+mem_heap_B=336256
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3874013
+mem_heap_B=369024
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3879466
+mem_heap_B=401792
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3884919
+mem_heap_B=434560
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3890372
+mem_heap_B=467328
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3895825
+mem_heap_B=500096
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3901278
+mem_heap_B=532864
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3906731
+mem_heap_B=565632
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=3912184
+mem_heap_B=598400
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=detailed
+n3: 598400 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 524288 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 524288 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 524288 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 524288 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 524288 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n1: 524288 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 524288 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 384 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=3917771
+mem_heap_B=598448
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=3919064
+mem_heap_B=631216
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=3924517
+mem_heap_B=663984
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=3929333
+mem_heap_B=1188272
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=3929369
+mem_heap_B=1253808
+mem_heap_extra_B=184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=44758486
+mem_heap_B=1254192
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=44761305
+mem_heap_B=1258288
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=44762930
+mem_heap_B=1262384
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=44764555
+mem_heap_B=1266480
+mem_heap_extra_B=216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=44766180
+mem_heap_B=1270576
+mem_heap_extra_B=224
+mem_stacks_B=0
+heap_tree=detailed
+n5: 1270576 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 606208 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 606208 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 606208 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 606208 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 606208 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n3: 606208 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 524288 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 65536 0x10F6AF: matrix_matrix_test() (matrix_multiplication.cc:106)
+        n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 16384 0x10F8B0: matrix_matrix_test() (matrix_multiplication.cc:124)
+        n0: 16384 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 524288 0x10F6B9: matrix_matrix_test() (matrix_multiplication.cc:107)
+  n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10F6CA: matrix_matrix_test() (matrix_multiplication.cc:108)
+  n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+ n0: 816 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=44767805
+mem_heap_B=1274672
+mem_heap_extra_B=232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=44769430
+mem_heap_B=1278768
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=44771055
+mem_heap_B=1282864
+mem_heap_extra_B=248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=44772680
+mem_heap_B=1286960
+mem_heap_extra_B=256
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=44774305
+mem_heap_B=1291056
+mem_heap_extra_B=264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=44775930
+mem_heap_B=1295152
+mem_heap_extra_B=272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=44777555
+mem_heap_B=1299248
+mem_heap_extra_B=280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=44779180
+mem_heap_B=1303344
+mem_heap_extra_B=288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=44780805
+mem_heap_B=1307440
+mem_heap_extra_B=296
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=44782430
+mem_heap_B=1311536
+mem_heap_extra_B=304
+mem_stacks_B=0
+heap_tree=detailed
+n5: 1311536 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 647168 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 647168 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 647168 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 647168 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 647168 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n3: 647168 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 524288 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 65536 0x10F6AF: matrix_matrix_test() (matrix_multiplication.cc:106)
+        n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 57344 0x10F8B0: matrix_matrix_test() (matrix_multiplication.cc:124)
+        n0: 57344 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 524288 0x10F6B9: matrix_matrix_test() (matrix_multiplication.cc:107)
+  n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10F6CA: matrix_matrix_test() (matrix_multiplication.cc:108)
+  n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+ n0: 816 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=44784055
+mem_heap_B=1315632
+mem_heap_extra_B=312
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=44785680
+mem_heap_B=1319728
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=44786668
+mem_heap_B=1352496
+mem_heap_extra_B=328
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=366091648
+mem_heap_B=1352496
+mem_heap_extra_B=328
+mem_stacks_B=0
+heap_tree=peak
+n6: 1352496 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 655360 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 655360 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 655360 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 655360 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 655360 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n3: 655360 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 524288 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 65536 0x10F6AF: matrix_matrix_test() (matrix_multiplication.cc:106)
+        n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 65536 0x10F8B0: matrix_matrix_test() (matrix_multiplication.cc:124)
+        n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 524288 0x10F6B9: matrix_matrix_test() (matrix_multiplication.cc:107)
+  n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10F6CA: matrix_matrix_test() (matrix_multiplication.cc:108)
+  n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 32768 0x10F8BA: matrix_matrix_test() (matrix_multiplication.cc:125)
+  n0: 32768 0x10FC56: main (matrix_multiplication.cc:158)
+ n0: 816 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=366091648
+mem_heap_B=828208
+mem_heap_extra_B=320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=366091681
+mem_heap_B=762672
+mem_heap_extra_B=312
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=366091714
+mem_heap_B=729904
+mem_heap_extra_B=304
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=366091950
+mem_heap_B=725808
+mem_heap_extra_B=296
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=366092173
+mem_heap_B=721712
+mem_heap_extra_B=288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=366092396
+mem_heap_B=717616
+mem_heap_extra_B=280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=366092619
+mem_heap_B=713520
+mem_heap_extra_B=272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=366092842
+mem_heap_B=709424
+mem_heap_extra_B=264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=366093065
+mem_heap_B=705328
+mem_heap_extra_B=256
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=366093288
+mem_heap_B=701232
+mem_heap_extra_B=248
+mem_stacks_B=0
+heap_tree=detailed
+n3: 701232 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 626688 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 626688 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 626688 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 626688 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 626688 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n3: 626688 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 524288 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 65536 0x10F6AF: matrix_matrix_test() (matrix_multiplication.cc:106)
+        n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 36864 0x10F8B0: matrix_matrix_test() (matrix_multiplication.cc:124)
+        n0: 36864 0x10FC56: main (matrix_multiplication.cc:158)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 816 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=366093511
+mem_heap_B=697136
+mem_heap_extra_B=240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=366093734
+mem_heap_B=693040
+mem_heap_extra_B=232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=366093957
+mem_heap_B=688944
+mem_heap_extra_B=224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=366094180
+mem_heap_B=684848
+mem_heap_extra_B=216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=366094403
+mem_heap_B=680752
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=366094626
+mem_heap_B=676656
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=366094849
+mem_heap_B=672560
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=366095072
+mem_heap_B=668464
+mem_heap_extra_B=184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=366095295
+mem_heap_B=664368
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=366095450
+mem_heap_B=663984
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=detailed
+n3: 663984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589824 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 589824 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 589824 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 589824 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 589824 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n3: 589824 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 524288 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 524288 0x10FC56: main (matrix_multiplication.cc:158)
+       n1: 65536 0x10F6AF: matrix_matrix_test() (matrix_multiplication.cc:106)
+        n0: 65536 0x10FC56: main (matrix_multiplication.cc:158)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 432 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=366095735
+mem_heap_B=631216
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=366095958
+mem_heap_B=598448
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=366096113
+mem_heap_B=598400
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=366096398
+mem_heap_B=565632
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=366096621
+mem_heap_B=532864
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=366096844
+mem_heap_B=500096
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=366097067
+mem_heap_B=467328
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=366097290
+mem_heap_B=434560
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=366097513
+mem_heap_B=401792
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=366097736
+mem_heap_B=369024
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=detailed
+n3: 369024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 294912 0x10D399: __gnu_cxx::new_allocator<Block<int> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  n1: 294912 0x10CBF2: std::allocator_traits<std::allocator<Block<int> > >::allocate(std::allocator<Block<int> >&, unsigned long) (alloc_traits.h:460)
+   n1: 294912 0x10C30B: std::_Vector_base<Block<int>, std::allocator<Block<int> > >::_M_allocate(unsigned long) (stl_vector.h:346)
+    n1: 294912 0x10B2E3: std::vector<Block<int>, std::allocator<Block<int> > >::_M_default_append(unsigned long) (vector.tcc:635)
+     n1: 294912 0x10A3F8: std::vector<Block<int>, std::allocator<Block<int> > >::resize(unsigned long) (stl_vector.h:940)
+      n2: 294912 0x10959B: Matrix<int>::Matrix(int, int) (matrix_data.cc:16)
+       n1: 294912 0x10F699: matrix_matrix_test() (matrix_multiplication.cc:105)
+        n0: 294912 0x10FC56: main (matrix_multiplication.cc:158)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 384 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=80
+#-----------
+time=366097959
+mem_heap_B=336256
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=366098182
+mem_heap_B=303488
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=366098405
+mem_heap_B=270720
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=366098628
+mem_heap_B=237952
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=366098851
+mem_heap_B=205184
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=366099074
+mem_heap_B=172416
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=366099297
+mem_heap_B=139648
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=366099520
+mem_heap_B=106880
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=366099743
+mem_heap_B=74112
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=366099898
+mem_heap_B=73728
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=detailed
+n2: 73728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4914501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 0 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=90
+#-----------
+time=366113904
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
