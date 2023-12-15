@@ -194,9 +194,8 @@ void run_transformer(){
         return;
     }
     uint32_t out[D_SEQ*D_MODEL];
-    uint32_t out_systolic[D_SEQ*D_MODEL];
+
     uint32_t *temp;
-    uint32_t *temp_systolic;
 
 
     uint32_t * weightVec[3*NUM_HEAD+3];
