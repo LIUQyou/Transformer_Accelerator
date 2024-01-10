@@ -153,9 +153,104 @@ int matrix_matrix_test()
     return 0;
 }
 
+int matrix_matrix_original()
+{
+    // Matrix<int> matrixA(INPUT_DIMENSION, INSIDE_DIMENSION);
+    // Matrix<int> matrixB(OUTPUT_DIMENSION, INSIDE_DIMENSION);
+    Data_Type* matrixA_ = new Data_Type[INPUT_DIMENSION * INSIDE_DIMENSION];
+    Data_Type* matrixB_ = new Data_Type[INSIDE_DIMENSION * OUTPUT_DIMENSION];
+    // Initialize blocks with test data
+    for (int i = 0; i < INPUT_DIMENSION; ++i) {
+        for (int j = 0; j < INSIDE_DIMENSION; ++j) {
+            // matrixA.at(i, j) = rand()%5; // or some other test values
+            matrixA_[i * INSIDE_DIMENSION + j] = matrixA.at(i, j);
+        }
+    }
+    for (int i = 0; i < OUTPUT_DIMENSION; ++i) {
+        for (int j = 0; j < INSIDE_DIMENSION; ++j) {
+            // matrixB.at(i, j) = rand()%5; // or some other test values
+            matrixB_[j * OUTPUT_DIMENSION + i] = matrixB.at(i, j);
+        }
+    }
+
+    // Result block
+    // Matrix<int> result(INPUT_DIMENSION, OUTPUT_DIMENSION);
+    Data_Type* result_ = new Data_Type[INPUT_DIMENSION * OUTPUT_DIMENSION];
+    // Initialize result block to zero
+    // for (int i = 0; i < INPUT_DIMENSION; ++i) {
+    //     for (int j = 0; j < OUTPUT_DIMENSION; ++j) {
+    //         result.at(i, j) = 0;
+    //         result_[i * OUTPUT_DIMENSION + j] = 0;
+    //     }
+    // }
+
+    // Perform multiplication
+    // Matrix<int>::multiply(matrixA, matrixB, result);
+    matrix_matrix_multiplication(matrixA_, matrixB_, result_, INPUT_DIMENSION, INSIDE_DIMENSION, OUTPUT_DIMENSION);
+
+    delete[] matrixA_;
+    delete[] matrixB_;
+    delete[] result_;
+
+    return 0;
+}
+
+int matrix_matrix_Block()
+{
+    Matrix<int> matrixA(INPUT_DIMENSION, INSIDE_DIMENSION);
+    Matrix<int> matrixB(OUTPUT_DIMENSION, INSIDE_DIMENSION);
+    // Data_Type* matrixA_ = new Data_Type[INPUT_DIMENSION * INSIDE_DIMENSION];
+    // Data_Type* matrixB_ = new Data_Type[INSIDE_DIMENSION * OUTPUT_DIMENSION];
+    // Initialize blocks with test data
+    for (int i = 0; i < INPUT_DIMENSION; ++i) {
+        for (int j = 0; j < INSIDE_DIMENSION; ++j) {
+            matrixA.at(i, j) = rand()%5; // or some other test values
+            // matrixA_[i * INSIDE_DIMENSION + j] = matrixA.at(i, j);
+        }
+    }
+    for (int i = 0; i < OUTPUT_DIMENSION; ++i) {
+        for (int j = 0; j < INSIDE_DIMENSION; ++j) {
+            matrixB.at(i, j) = rand()%5; // or some other test values
+            // matrixB_[j * OUTPUT_DIMENSION + i] = matrixB.at(i, j);
+        }
+    }
+
+    // Result block
+    Matrix<int> result(INPUT_DIMENSION, OUTPUT_DIMENSION);
+    // Data_Type* result_ = new Data_Type[INPUT_DIMENSION * OUTPUT_DIMENSION];
+    // Initialize result block to zero
+    // for (int i = 0; i < INPUT_DIMENSION; ++i) {
+    //     for (int j = 0; j < OUTPUT_DIMENSION; ++j) {
+    //         result.at(i, j) = 0;
+    //         result_[i * OUTPUT_DIMENSION + j] = 0;
+    //     }
+    // }
+
+    // Perform multiplication
+    Matrix<int>::multiply(matrixA, matrixB, result);
+    // matrix_matrix_multiplication(matrixA_, matrixB_, result_, INPUT_DIMENSION, INSIDE_DIMENSION, OUTPUT_DIMENSION);
+
+    // compare the reuslt from result and result_
+    // for (int i = 0; i < INPUT_DIMENSION; ++i) {
+    //     for (int j = 0; j < OUTPUT_DIMENSION; ++j) {
+    //         if (result.at(i, j) != result_[i * OUTPUT_DIMENSION + j]) {
+    //             std::cout << "Error: result.data[" << i << "][" << j << "] = " << result.at(i, j) <<
+    //              ", result_[" << i << "][" << j << "] = " << result_[i * OUTPUT_DIMENSION + j] << std::endl;
+    //         }
+    //     }
+    // }
+
+    // delete[] matrixA_;
+    // delete[] matrixB_;
+    // delete[] result_;
+
+    return 0;
+}
+
 int main()
 {
-    block_block_test();
-    matrix_matrix_test();
+    // block_block_test();
+    // matrix_matrix_test();
+    matrix_matrix_original();
     return 0;
 }
