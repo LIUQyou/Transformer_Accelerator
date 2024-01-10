@@ -1,0 +1,1 @@
+Running perf stat for matrix_test_original

@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -Wextra -g -Wno-sign-compare -std=c++11 -I/home/quliu/transformer/accelerator -I/home/quliu/transformer/transformer_layers
+CFLAGS = -Wall -Wextra -g -Wno-sign-compare -std=c++11 -I/users/LiuQun/Transformer_Accelerator/original_transformer/accelerator -I/users/LiuQun/Transformer_Accelerator/original_transformer/transformer_layers
 
 # Add the .cc files here
 SOURCES = transformer.cpp \

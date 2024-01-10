@@ -1,0 +1,42 @@
+Running perf stat for eigen3_matrix
+Result matrix dimensions: 2048x2048
+
+ Performance counter stats for './eigen3_matrix':
+
+    90,463,796,057      L1-dcache-loads                                               (44.44%)
+       108,683,443      L1-dcache-load-misses     #    0.12% of all L1-dcache hits    (44.44%)
+    75,737,152,389      L1-dcache-stores                                              (44.44%)
+         2,897,012      L1-icache-load-misses                                         (44.44%)
+         1,577,367      LLC-loads                                                     (44.44%)
+           317,329      LLC-load-misses           #   20.12% of all LL-cache hits     (44.44%)
+    90,518,121,879      dTLB-loads                                                    (44.44%)
+            50,042      dTLB-load-misses          #    0.00% of all dTLB cache hits   (44.44%)
+   119,749,419,949      cycles                                                        (44.44%)
+
+      39.960750824 seconds time elapsed
+
+      39.924187000 seconds user
+       0.036000000 seconds sys
+
+
+Running perf stat for eigen3_matrix_O2
+Result matrix dimensions: 2048x2048
+
+ Performance counter stats for './eigen3_matrix_O2':
+
+     1,097,507,828      L1-dcache-loads                                               (44.59%)
+        78,881,571      L1-dcache-load-misses     #    7.19% of all L1-dcache hits    (44.59%)
+       105,618,460      L1-dcache-stores                                              (44.59%)
+           216,618      L1-icache-load-misses                                         (44.59%)
+         1,887,613      LLC-loads                                                     (44.33%)
+           318,133      LLC-load-misses           #   16.85% of all LL-cache hits     (44.33%)
+     1,085,088,588      dTLB-loads                                                    (44.33%)
+            41,625      dTLB-load-misses          #    0.00% of all dTLB cache hits   (44.33%)
+     2,550,153,296      cycles                                                        (44.33%)
+
+       0.866786013 seconds time elapsed
+
+       0.842766000 seconds user
+       0.024079000 seconds sys
+
+

@@ -1,0 +1,48 @@
+Running perf stat for matrix_test_original
+
+ Performance counter stats for './matrix_test_original':
+
+         1,055,046      L1-dcache-loads                                               (69.88%)
+            45,336      L1-dcache-load-misses     #    4.30% of all L1-dcache hits  
+           429,604      L1-dcache-stores                                            
+            37,597      L1-icache-load-misses                                       
+             1,882      LLC-loads                                                     (30.12%)
+     <not counted>      LLC-load-misses                                               (0.00%)
+     <not counted>      dTLB-loads                                                    (0.00%)
+     <not counted>      dTLB-load-misses                                              (0.00%)
+     <not counted>      cycles                                                        (0.00%)
+
+       0.005254769 seconds time elapsed
+
+       0.002698000 seconds user
+       0.002698000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog
+Running perf stat for matrix_test_Block
+
+ Performance counter stats for './matrix_test_Block':
+
+         1,095,119      L1-dcache-loads                                               (61.90%)
+            47,751      L1-dcache-load-misses     #    4.36% of all L1-dcache hits  
+           711,670      L1-dcache-stores                                            
+            38,523      L1-icache-load-misses                                       
+             2,506      LLC-loads                                                     (38.10%)
+     <not counted>      LLC-load-misses                                               (0.00%)
+     <not counted>      dTLB-loads                                                    (0.00%)
+     <not counted>      dTLB-load-misses                                              (0.00%)
+     <not counted>      cycles                                                        (0.00%)
+
+       0.005321364 seconds time elapsed
+
+       0.005429000 seconds user
+       0.000000000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog

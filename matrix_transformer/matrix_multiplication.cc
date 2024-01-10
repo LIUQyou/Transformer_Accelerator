@@ -1,7 +1,7 @@
 #include "matrix_data.hh"
-#define INPUT_DIMENSION 256
-#define OUTPUT_DIMENSION 64
-#define INSIDE_DIMENSION 512
+//#define INPUT_DIMENSION 256
+//#define OUTPUT_DIMENSION 64
+//#define INSIDE_DIMENSION 512
 
 typedef u_int32_t Data_Type;
 
@@ -163,13 +163,13 @@ int matrix_matrix_original()
     for (int i = 0; i < INPUT_DIMENSION; ++i) {
         for (int j = 0; j < INSIDE_DIMENSION; ++j) {
             // matrixA.at(i, j) = rand()%5; // or some other test values
-            matrixA_[i * INSIDE_DIMENSION + j] = matrixA.at(i, j);
+            matrixA_[i * INSIDE_DIMENSION + j] = rand()%5;
         }
     }
     for (int i = 0; i < OUTPUT_DIMENSION; ++i) {
         for (int j = 0; j < INSIDE_DIMENSION; ++j) {
             // matrixB.at(i, j) = rand()%5; // or some other test values
-            matrixB_[j * OUTPUT_DIMENSION + i] = matrixB.at(i, j);
+            matrixB_[j * OUTPUT_DIMENSION + i] = rand()%5;
         }
     }
 
@@ -251,6 +251,12 @@ int main()
 {
     // block_block_test();
     // matrix_matrix_test();
+#ifdef MATRIX_MATRIX_ORIGINAL
     matrix_matrix_original();
+#endif
+
+#ifdef MATRIX_MATRIX_BLOCK
+    matrix_matrix_Block();
+#endif
     return 0;
 }
