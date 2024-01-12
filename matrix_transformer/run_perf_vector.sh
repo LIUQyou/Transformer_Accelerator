@@ -5,7 +5,7 @@ start1=64
 end1=2048
 stride1=64
 
-start2=3072
+start2=2048
 end2=8192
 stride2=1024
 

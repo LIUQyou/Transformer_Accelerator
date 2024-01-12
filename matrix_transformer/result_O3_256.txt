@@ -1,0 +1,48 @@
+Running perf stat for matrix_test_original
+
+ Performance counter stats for './matrix_test_original':
+
+        12,010,729      L1-dcache-loads                                               (14.58%)
+         1,121,546      L1-dcache-load-misses     #    9.34% of all L1-dcache hits    (31.19%)
+         2,545,394      L1-dcache-stores                                              (33.27%)
+             2,803      L1-icache-load-misses                                         (33.28%)
+         4,010,341      LLC-loads                                                     (33.28%)
+                90      LLC-load-misses           #    0.00% of all LL-cache hits     (49.92%)
+        19,780,640      dTLB-loads                                                    (18.87%)
+            25,133      dTLB-load-misses          #    0.13% of all dTLB cache hits   (2.22%)
+     <not counted>      cycles                                                        (0.00%)
+
+       0.024424668 seconds time elapsed
+
+       0.024480000 seconds user
+       0.000000000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog
+Running perf stat for matrix_test_Block
+
+ Performance counter stats for './matrix_test_Block':
+
+         8,396,009      L1-dcache-loads                                               (4.54%)
+           292,660      L1-dcache-load-misses     #    3.49% of all L1-dcache hits    (21.15%)
+         9,767,967      L1-dcache-stores                                              (33.18%)
+             3,451      L1-icache-load-misses                                         (33.17%)
+             7,853      LLC-loads                                                     (33.21%)
+                22      LLC-load-misses           #    0.28% of all LL-cache hits     (49.79%)
+        68,663,870      dTLB-loads                                                    (29.07%)
+             4,813      dTLB-load-misses          #    0.01% of all dTLB cache hits   (12.49%)
+     <not counted>      cycles                                                        (0.00%)
+
+       0.024438271 seconds time elapsed
+
+       0.024527000 seconds user
+       0.000000000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog

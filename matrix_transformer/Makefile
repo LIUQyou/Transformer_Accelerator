@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -Wextra -g -Wno-sign-compare -std=c++11 -O2
+CFLAGS = -Wall -Wextra -Wno-sign-compare -std=c++11 -O2 -Wunused-result
 
 CFLAGS_ORIGINAL = -DMATRIX_MATRIX_ORIGINAL
 CFLAGS_BLOCK = -DMATRIX_MATRIX_BLOCK

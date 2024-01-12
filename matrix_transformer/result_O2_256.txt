@@ -2,39 +2,43 @@ Running perf stat for matrix_test_original
 
  Performance counter stats for './matrix_test_original':
 
-        48,906,956      L1-dcache-loads                                               (42.94%)
-        16,315,437      L1-dcache-load-misses     #   33.36% of all L1-dcache hits    (42.93%)
-         4,078,307      L1-dcache-stores                                              (42.92%)
-            85,860      L1-icache-load-misses                                         (43.38%)
-               431      LLC-loads                                                     (45.64%)
-                89      LLC-load-misses           #   20.65% of all LL-cache hits     (45.66%)
-        39,927,025      dTLB-loads                                                    (45.66%)
-               137      dTLB-load-misses          #    0.00% of all dTLB cache hits   (45.67%)
-        66,626,366      cycles                                                        (45.20%)
+        37,231,744      L1-dcache-loads                                               (27.28%)
+        12,191,355      L1-dcache-load-misses     #   32.74% of all L1-dcache hits    (33.92%)
+         3,356,855      L1-dcache-stores                                              (25.52%)
+             3,484      L1-icache-load-misses                                         (18.89%)
+         9,308,348      LLC-loads                                                     (18.87%)
+               116      LLC-load-misses           #    0.00% of all LL-cache hits     (28.31%)
+        44,110,050      dTLB-loads                                                    (18.88%)
+               370      dTLB-load-misses          #    0.00% of all dTLB cache hits   (18.88%)
+       109,733,944      cycles                                                        (18.88%)
 
-       0.035651984 seconds time elapsed
+       0.042731567 seconds time elapsed
 
-       0.035766000 seconds user
-       0.000000000 seconds sys
+       0.038518000 seconds user
+       0.004279000 seconds sys
 
 
 Running perf stat for matrix_test_Block
 
  Performance counter stats for './matrix_test_Block':
 
-        57,271,951      L1-dcache-loads                                               (40.07%)
-           314,200      L1-dcache-load-misses     #    0.55% of all L1-dcache hits    (40.07%)
-        15,221,027      L1-dcache-stores                                              (40.06%)
-           125,913      L1-icache-load-misses                                         (40.06%)
-             9,737      LLC-loads                                                     (47.94%)
-               252      LLC-load-misses           #    2.59% of all LL-cache hits     (47.95%)
-        38,592,233      dTLB-loads                                                    (47.94%)
-                25      dTLB-load-misses          #    0.00% of all dTLB cache hits   (47.95%)
-        54,046,062      cycles                                                        (47.96%)
+         8,677,263      L1-dcache-loads                                               (16.00%)
+           228,219      L1-dcache-load-misses     #    2.63% of all L1-dcache hits    (34.15%)
+         9,367,453      L1-dcache-stores                                              (36.26%)
+             1,760      L1-icache-load-misses                                         (36.29%)
+            13,893      LLC-loads                                                     (36.25%)
+               605      LLC-load-misses           #    4.35% of all LL-cache hits     (47.74%)
+        61,218,380      dTLB-loads                                                    (11.49%)
+     <not counted>      dTLB-load-misses                                              (0.00%)
+     <not counted>      cycles                                                        (0.00%)
 
-       0.033951677 seconds time elapsed
+       0.022377004 seconds time elapsed
 
-       0.026529000 seconds user
-       0.007579000 seconds sys
+       0.017949000 seconds user
+       0.004487000 seconds sys
 
 
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog

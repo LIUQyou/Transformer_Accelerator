@@ -2,39 +2,39 @@ Running perf stat for matrix_test_original
 
  Performance counter stats for './matrix_test_original':
 
-     3,113,610,457      L1-dcache-loads                                               (44.31%)
-     1,552,170,988      L1-dcache-load-misses     #   49.85% of all L1-dcache hits    (44.48%)
-        38,110,732      L1-dcache-stores                                              (44.66%)
-           546,346      L1-icache-load-misses                                         (44.80%)
-       194,279,894      LLC-loads                                                     (44.65%)
-            40,383      LLC-load-misses           #    0.02% of all LL-cache hits     (44.48%)
-     3,111,158,013      dTLB-loads                                                    (44.30%)
-            28,036      dTLB-load-misses          #    0.00% of all dTLB cache hits   (44.16%)
-     6,693,464,890      cycles                                                        (44.16%)
+     3,103,791,429      L1-dcache-loads                                               (22.25%)
+     1,572,945,034      L1-dcache-load-misses     #   50.68% of all L1-dcache hits    (22.27%)
+        37,145,489      L1-dcache-stores                                              (22.24%)
+           495,964      L1-icache-load-misses                                         (22.21%)
+     1,549,372,748      LLC-loads                                                     (22.21%)
+             7,967      LLC-load-misses           #    0.00% of all LL-cache hits     (33.31%)
+     3,119,683,957      dTLB-loads                                                    (33.27%)
+     1,403,628,525      dTLB-load-misses          #   44.99% of all dTLB cache hits   (22.21%)
+    31,167,738,915      cycles                                                        (22.21%)
 
-       2.246969099 seconds time elapsed
+       9.510657480 seconds time elapsed
 
-       2.235011000 seconds user
-       0.012016000 seconds sys
+       9.506401000 seconds user
+       0.004001000 seconds sys
 
 
 Running perf stat for matrix_test_Block
 
  Performance counter stats for './matrix_test_Block':
 
-     3,182,146,361      L1-dcache-loads                                               (43.98%)
-        13,974,394      L1-dcache-load-misses     #    0.44% of all L1-dcache hits    (43.98%)
-     1,581,755,185      L1-dcache-stores                                              (44.30%)
-           212,416      L1-icache-load-misses                                         (44.69%)
-           184,593      LLC-loads                                                     (44.82%)
-            24,317      LLC-load-misses           #   13.17% of all LL-cache hits     (44.82%)
-     3,155,874,101      dTLB-loads                                                    (44.82%)
-           127,357      dTLB-load-misses          #    0.00% of all dTLB cache hits   (44.49%)
-     3,066,752,538      cycles                                                        (44.11%)
+     3,197,651,387      L1-dcache-loads                                               (22.42%)
+        13,983,489      L1-dcache-load-misses     #    0.44% of all L1-dcache hits    (22.76%)
+     1,543,962,968      L1-dcache-stores                                              (22.42%)
+            59,554      L1-icache-load-misses                                         (22.07%)
+           708,485      LLC-loads                                                     (22.06%)
+            21,840      LLC-load-misses           #    3.08% of all LL-cache hits     (33.10%)
+     3,210,978,022      dTLB-loads                                                    (32.74%)
+         1,202,928      dTLB-load-misses          #    0.04% of all dTLB cache hits   (22.07%)
+     3,619,026,372      cycles                                                        (22.07%)
 
-       1.035856450 seconds time elapsed
+       1.124283407 seconds time elapsed
 
-       1.011930000 seconds user
-       0.023998000 seconds sys
+       1.100260000 seconds user
+       0.024005000 seconds sys
 
 

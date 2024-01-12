@@ -1,0 +1,40 @@
+Running perf stat for matrix_test_original
+
+ Performance counter stats for './matrix_test_original':
+
+     3,583,838,362      L1-dcache-loads                                               (22.21%)
+     1,209,039,220      L1-dcache-load-misses     #   33.74% of all L1-dcache hits    (22.22%)
+        69,140,121      L1-dcache-stores                                              (22.23%)
+           540,748      L1-icache-load-misses                                         (22.23%)
+     1,186,002,619      LLC-loads                                                     (22.23%)
+           135,833      LLC-load-misses           #    0.01% of all LL-cache hits     (33.34%)
+     3,563,217,087      dTLB-loads                                                    (33.29%)
+     1,155,945,128      dTLB-load-misses          #   32.44% of all dTLB cache hits   (22.23%)
+    27,469,417,949      cycles                                                        (22.21%)
+
+       8.386659247 seconds time elapsed
+
+       8.366402000 seconds user
+       0.020005000 seconds sys
+
+
+Running perf stat for matrix_test_Block
+
+ Performance counter stats for './matrix_test_Block':
+
+     9,571,841,166      L1-dcache-loads                                               (22.27%)
+        41,095,903      L1-dcache-load-misses     #    0.43% of all L1-dcache hits    (22.39%)
+     4,667,143,394      L1-dcache-stores                                              (22.30%)
+           172,102      L1-icache-load-misses                                         (22.31%)
+         4,418,140      LLC-loads                                                     (22.31%)
+           591,895      LLC-load-misses           #   13.40% of all LL-cache hits     (33.36%)
+     9,551,127,592      dTLB-loads                                                    (33.12%)
+         2,353,840      dTLB-load-misses          #    0.02% of all dTLB cache hits   (22.06%)
+    10,745,966,987      cycles                                                        (22.06%)
+
+       3.300594719 seconds time elapsed
+
+       3.259574000 seconds user
+       0.040043000 seconds sys
+
+

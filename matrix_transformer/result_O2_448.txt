@@ -2,39 +2,39 @@ Running perf stat for matrix_test_original
 
  Performance counter stats for './matrix_test_original':
 
-       194,326,268      L1-dcache-loads                                               (42.57%)
-        96,494,068      L1-dcache-load-misses     #   49.66% of all L1-dcache hits    (45.89%)
-         5,167,886      L1-dcache-stores                                              (49.23%)
-           111,487      L1-icache-load-misses                                         (50.13%)
-           154,935      LLC-loads                                                     (47.45%)
-             1,966      LLC-load-misses           #    1.27% of all LL-cache hits     (44.13%)
-       182,835,612      dTLB-loads                                                    (40.81%)
-               305      dTLB-load-misses          #    0.00% of all dTLB cache hits   (39.89%)
-       303,218,935      cycles                                                        (39.89%)
+       183,418,971      L1-dcache-loads                                               (19.80%)
+        78,055,312      L1-dcache-load-misses     #   42.56% of all L1-dcache hits    (22.57%)
+        15,050,476      L1-dcache-stores                                              (22.91%)
+            14,591      L1-icache-load-misses                                         (22.92%)
+         8,278,434      LLC-loads                                                     (22.91%)
+               352      LLC-load-misses           #    0.00% of all LL-cache hits     (34.37%)
+       200,189,429      dTLB-loads                                                    (31.51%)
+             2,439      dTLB-load-misses          #    0.00% of all dTLB cache hits   (22.92%)
+       361,690,769      cycles                                                        (20.14%)
 
-       0.120892826 seconds time elapsed
+       0.140017332 seconds time elapsed
 
-       0.116980000 seconds user
-       0.004033000 seconds sys
+       0.132318000 seconds user
+       0.007783000 seconds sys
 
 
 Running perf stat for matrix_test_Block
 
  Performance counter stats for './matrix_test_Block':
 
-       214,793,204      L1-dcache-loads                                               (46.54%)
-         1,065,428      L1-dcache-load-misses     #    0.50% of all L1-dcache hits    (46.53%)
-        87,650,733      L1-dcache-stores                                              (46.54%)
-           137,135      L1-icache-load-misses                                         (46.53%)
-            10,237      LLC-loads                                                     (42.77%)
-             1,159      LLC-load-misses           #   11.32% of all LL-cache hits     (42.77%)
-       202,469,347      dTLB-loads                                                    (42.77%)
-               324      dTLB-load-misses          #    0.00% of all dTLB cache hits   (42.77%)
-       217,465,809      cycles                                                        (42.77%)
+       197,759,736      L1-dcache-loads                                               (19.36%)
+         1,109,330      L1-dcache-load-misses     #    0.56% of all L1-dcache hits    (23.68%)
+        84,250,105      L1-dcache-stores                                              (25.93%)
+             9,515      L1-icache-load-misses                                         (25.93%)
+            45,925      LLC-loads                                                     (25.94%)
+             2,485      LLC-load-misses           #    5.41% of all LL-cache hits     (37.42%)
+       215,278,058      dTLB-loads                                                    (28.78%)
+             9,496      dTLB-load-misses          #    0.00% of all dTLB cache hits   (17.29%)
+       239,445,421      cycles                                                        (17.29%)
 
-       0.075202974 seconds time elapsed
+       0.092879192 seconds time elapsed
 
-       0.075249000 seconds user
+       0.092949000 seconds user
        0.000000000 seconds sys
 
 
